@@ -9,6 +9,8 @@
         "future": "cpp",
         "istream": "cpp",
         "tuple": "cpp",
-        "utility": "cpp"
+        "utility": "cpp",
+        "iosfwd": "cpp",
+        "random": "cpp"
     }
 }
