@@ -1,20 +1,20 @@
 #include <bits/stdc++.h>
 #define fastio ios::sync_with_stdio(0), cin.tie(0), cout.tie(0)
 #define ll long long
- 
+
 using namespace std;
 ll testcase;
- 
+
 struct triple
 {
     ll first, second, third;
 };
- 
+
 bool cmp(triple a, triple b)
 {
     return a.second < b.second;
 }
- 
+
 int main()
 {
     fastio;
@@ -23,7 +23,7 @@ int main()
     {
         ll n, q;
         cin >> n >> q;
- 
+
         deque<pair<ll, ll>> dq;
         vector<triple> questions;
         vector<ll> ans(q + 1);
@@ -70,12 +70,15 @@ int main()
             }
             if (questions[questionIndex].second == round)
             {
-                ans[questions[questionIndex].third] = wllime[questions[questionIndex].first];
-                questionIndex++;
+                while (questions[questionIndex].second == round)
+                {
+                    ans[questions[questionIndex].third] = wllime[questions[questionIndex].first];
+                    questionIndex++;
+                }
             }
             if (round == maxIndex)
                 break;
-            if(questionIndex == q)
+            if (questionIndex == q)
                 break;
         }
         while (questionIndex < q)
@@ -97,6 +100,6 @@ int main()
             cout << ans[i] << "\n";
         }
     }
- 
+
     return 0;
 }
