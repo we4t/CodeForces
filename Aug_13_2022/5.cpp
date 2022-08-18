@@ -17,9 +17,9 @@ ll solve(ll l, ll r)
             for (ll k = i + 2; k <= r; k++)
             {
                 ll firstGcd = 1;
+                ll first = i, second = j;
                 for (ll pnt = 0; pnt < (ll)primes.size(); pnt++)
                 {
-                    ll first = i, second = j;
                     ll curPrime = primes[pnt];
                     if (curPrime > first)
                         break;
@@ -32,9 +32,9 @@ ll solve(ll l, ll r)
                 }
                 ll firstLcm = i * j / firstGcd;
                 ll secondGcd = 1;
+                first = firstLcm, second = k;
                 for (ll pnt = 0; pnt < (ll)primes.size(); pnt++)
                 {
-                    ll first = firstLcm, second = k;
                     ll curPrime = primes[pnt];
                     if (curPrime > min(first, second))
                         break;
