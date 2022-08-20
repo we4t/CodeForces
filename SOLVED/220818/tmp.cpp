@@ -4,20 +4,9 @@
 
 using namespace std;
 int testcase;
-
-void print(auto a)
-{
-    cout << a << "\n";
-}
-
 int main()
 {
     fastio;
-    cin >> testcase;
-    for (int test = 1; test <= testcase; test++)
-    {
-        // solve
-    }
-
+    cout << 1 % 0;
     return 0;
 }
